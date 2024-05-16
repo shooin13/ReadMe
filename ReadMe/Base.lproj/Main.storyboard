@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tgk-o1-QiF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JEh-RZ-V6f">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Library View Controller-->
+        <!--My Library-->
         <scene sceneID="Xlv-ls-9HA">
             <objects>
                 <tableViewController id="tgk-o1-QiF" customClass="LibraryViewController" customModule="ReadMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,6 +41,9 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="yC2-B1-Sz4" kind="show" destinationCreationSelector="showDetailView:" id="2ZJ-NA-gVo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -47,14 +51,89 @@
                             <outlet property="delegate" destination="tgk-o1-QiF" id="Y7p-rU-HWK"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="My Library" id="qUc-jU-m6p"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NB7-P1-Huo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782" y="-7"/>
+            <point key="canvasLocation" x="1707.6335877862596" y="-7.042253521126761"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="vpz-G9-I9d">
+            <objects>
+                <viewController id="yC2-B1-Sz4" userLabel="Detail View Controller" customClass="DetailViewController" customModule="ReadMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hrr-FW-rbs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="lFc-J7-Y4x">
+                                <rect key="frame" x="98.333333333333329" y="285.33333333333337" width="196.33333333333337" height="350.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNK-XM-i05">
+                                        <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="33.666666666666664"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXw-i4-oFR">
+                                        <rect key="frame" x="0.0" y="80.666666666666686" width="196.33333333333334" height="26.333333333333329"/>
+                                        <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hbw-XY-xJh">
+                                        <rect key="frame" x="0.0" y="155" width="196.33333333333334" height="195"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hbw-XY-xJh" secondAttribute="height" multiplier="1:1" id="tNJ-XN-ZCm"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LNN-yk-GPU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lFc-J7-Y4x" firstAttribute="width" secondItem="Hrr-FW-rbs" secondAttribute="width" multiplier="0.5" id="6sg-Bs-Rco"/>
+                            <constraint firstItem="lFc-J7-Y4x" firstAttribute="centerX" secondItem="LNN-yk-GPU" secondAttribute="centerX" id="ap9-1B-Ejv"/>
+                            <constraint firstItem="lFc-J7-Y4x" firstAttribute="centerY" secondItem="LNN-yk-GPU" secondAttribute="centerY" id="fpw-4g-hM0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ek5-b9-QRI"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="nXw-i4-oFR" id="lXH-VN-sQW"/>
+                        <outlet property="imageView" destination="hbw-XY-xJh" id="WOg-4Z-gBD"/>
+                        <outlet property="titleLabel" destination="yNK-XM-i05" id="QTu-9w-Mjf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wPd-pR-OMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2602.290076335878" y="-7.042253521126761"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="orG-ji-Lh8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JEh-RZ-V6f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7M7-hX-0gL">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tgk-o1-QiF" kind="relationship" relationship="rootViewController" id="bq9-48-nqb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upR-KQ-3di" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780.91603053435108" y="-7.042253521126761"/>
         </scene>
     </scenes>
     <resources>
+        <image name="book.circle" catalog="system" width="128" height="123"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
