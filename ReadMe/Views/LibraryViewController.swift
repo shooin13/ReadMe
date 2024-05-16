@@ -2,10 +2,15 @@ import UIKit
 
 final class LibraryViewController: UITableViewController {
 
+  
+  @IBSegueAction private func showDetailView(_ coder: NSCoder) -> DetailViewController? {
+    guard let indexPath = tableView.indexPathForSelectedRow else { fatalError("Nothing was selected")}
+    let book = Library.books[indexPath.row]
+    return DetailViewController(coder: coder, book: book)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    
   }
   
   //MARK: - DataSource

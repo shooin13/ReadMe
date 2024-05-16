@@ -15,6 +15,7 @@
 		574DFCA72BF68DC300D1C604 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 574DFCA62BF68DC300D1C604 /* Base */; };
 		574DFCB12BF69DB400D1C604 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DFCB02BF69DB400D1C604 /* Book.swift */; };
 		574DFCB62BF6A7B300D1C604 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DFCB52BF6A7B300D1C604 /* Library.swift */; };
+		574DFCB82BF6B7A000D1C604 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DFCB72BF6B7A000D1C604 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		574DFCA82BF68DC300D1C604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		574DFCB02BF69DB400D1C604 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		574DFCB52BF6A7B300D1C604 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		574DFCB72BF6B7A000D1C604 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				574DFC9E2BF68DC200D1C604 /* LibraryViewController.swift */,
+				574DFCB72BF6B7A000D1C604 /* DetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				574DFCB12BF69DB400D1C604 /* Book.swift in Sources */,
 				574DFC9F2BF68DC200D1C604 /* LibraryViewController.swift in Sources */,
 				574DFCB62BF6A7B300D1C604 /* Library.swift in Sources */,
+				574DFCB82BF6B7A000D1C604 /* DetailViewController.swift in Sources */,
 				574DFC9B2BF68DC200D1C604 /* AppDelegate.swift in Sources */,
 				574DFC9D2BF68DC200D1C604 /* SceneDelegate.swift in Sources */,
 			);
