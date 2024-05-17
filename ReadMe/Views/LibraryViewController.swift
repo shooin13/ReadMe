@@ -13,6 +13,11 @@ final class LibraryViewController: UITableViewController {
     super.viewDidLoad()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.reloadData()
+  }
+  
   //MARK: - DataSource
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     Library.books.count

@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -65,35 +66,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="lFc-J7-Y4x">
-                                <rect key="frame" x="98.333333333333329" y="285.33333333333337" width="196.33333333333337" height="350.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lFc-J7-Y4x">
+                                <rect key="frame" x="39.333333333333343" y="244" width="314.33333333333326" height="433"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNK-XM-i05">
-                                        <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="33.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNK-XM-i05">
+                                        <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="33.666666666666664"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXw-i4-oFR">
-                                        <rect key="frame" x="0.0" y="80.666666666666686" width="196.33333333333334" height="26.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="41.666666666666686" width="314.33333333333331" height="26.333333333333329"/>
                                         <color key="tintColor" systemColor="secondaryLabelColor"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hbw-XY-xJh">
-                                        <rect key="frame" x="0.0" y="155" width="196.33333333333334" height="195"/>
+                                        <rect key="frame" x="0.0" y="77" width="314.33333333333331" height="313.33333333333337"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="hbw-XY-xJh" secondAttribute="height" multiplier="1:1" id="tNJ-XN-ZCm"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otS-iH-oMK">
+                                        <rect key="frame" x="0.0" y="398.66666666666663" width="314.33333333333331" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Update Image...">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="updateImage" destination="yC2-B1-Sz4" eventType="touchUpInside" id="4df-Tn-LW7"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LNN-yk-GPU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lFc-J7-Y4x" firstAttribute="width" secondItem="Hrr-FW-rbs" secondAttribute="width" multiplier="0.5" id="6sg-Bs-Rco"/>
+                            <constraint firstItem="lFc-J7-Y4x" firstAttribute="width" secondItem="Hrr-FW-rbs" secondAttribute="width" multiplier="0.8" id="6sg-Bs-Rco"/>
                             <constraint firstItem="lFc-J7-Y4x" firstAttribute="centerX" secondItem="LNN-yk-GPU" secondAttribute="centerX" id="ap9-1B-Ejv"/>
                             <constraint firstItem="lFc-J7-Y4x" firstAttribute="centerY" secondItem="LNN-yk-GPU" secondAttribute="centerY" id="fpw-4g-hM0"/>
                         </constraints>
